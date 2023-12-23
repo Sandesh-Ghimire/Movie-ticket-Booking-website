@@ -1,0 +1,132 @@
+
+
+body{
+    color: white;
+}
+
+
+.movie-details-container {
+    display: block;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
+    margin: 20px;
+    /* background-color:white; */
+    /* opacity: 0.1; */
+    position: absolute;
+    top: 80px;
+    right: 100px;
+
+    width: 300px;
+    height: 500px;
+  
+    background: linear-gradient(0deg, #1C1C24, #1C1C24),
+    linear-gradient(0deg, #252D3C, #252D3C);
+    
+    
+  }
+  
+  .movie-details-header p{
+    color: #475772;
+   
+    /* text-align: center; */
+  }
+  .movie-details-header h1{
+    /* text-align: center; */
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+  }
+.map-link{
+    /* text-align: center; */
+    padding-left: 20px;
+    text-decoration: none;
+    color:red;
+    font-size: 14px;
+    font-weight: 60;
+  }
+  
+  .price-calculator {
+
+    flex-shrink: 0; /* Prevent the calculator from shrinking */
+  }
+  
+
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  .quantity-controls h1{
+
+    /* font-size: 16px; */
+    align-items: center;
+  }
+
+  .quantity-controls p{
+padding-right: 100px;
+
+    color: #475772;
+   
+    align-items: center;
+  }
+  .quantity-controls span{
+    padding-right: 20px;
+    padding-left: 20px;
+        /* color: #475772; */
+       
+        align-items: center;
+      }
+  .quantity-controls button{
+    height: 30px;
+    width: 30px;
+   border: #475772;
+        background-color: #475772;
+       border-radius: 5px;
+        align-items: center;
+      }
+
+
+  /* Add a margin-left:auto to push the card to the right side */
+  .movie-details-container {
+    margin-left: auto;
+  }
+  
+
+  .checkout-button
+  {
+    background-color: red;
+    color: white;
+    border: red;
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+
+  
+.movie-details-container1 {
+  display: block;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+  /* border-radius: 5px; */
+  /* border-radius: 8px; */
+  /* margin: 20px; */
+  /* position: absolute; */
+  /* top: 80px; */
+  /* right: 100px; */
+  width: 300px;
+  /* height: 500px; */
+
+}
+
+.movie-details-container1 img{
+  border-radius: 5px;
+  height: 400px;
+  
+}
+

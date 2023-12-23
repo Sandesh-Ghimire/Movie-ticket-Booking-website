@@ -1,0 +1,75 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(0deg, #1C1C24, #1C1C24),
+    linear-gradient(0deg, #252D3C, #252D3C);
+    ;
+    color: white;
+    /* height: 80px; */
+    padding:10px, 100px, 10px, 100px ;
+    gap:10px;
+  }
+
+ 
+
+
+  .logo {
+    /* Set aspect ratio to 2:1 */
+    width: 60px;
+    height: 40px;
+  }
+
+  
+  .logo img {
+    width: 180%;
+    height: 100%;
+    object-fit: contain; /* Adjust this property based on your preference */
+  }
+
+ 
+  .pages {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+    border: 2px;
+    /* border-radius: 10px; */
+  }
+  
+  .links {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: white;
+    /* font-weight: bold; */
+    font-size: 1rem;
+  }
+
+  
+  .signup-button {
+    background-color: red;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .login-button {
+    background-color:transparent;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
