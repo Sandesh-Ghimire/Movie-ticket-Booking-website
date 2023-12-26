@@ -3,6 +3,7 @@ import React from 'react';
 import CheckoutForm from './CheckoutForm';
 import CheckoutSummary from './CheckoutSummary';
 import { useLocation } from 'react-router-dom';
+import './checkoutPage.css'; // Import the CSS file
 
 const CheckoutPage = () => {
   const location = useLocation();
