@@ -3,7 +3,7 @@ import "./movieDetails.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from 'react-router-dom';
-import CheckoutForm from "./CheckoutForm";
+
 const MovieDetails = ({ id, title, posterPath, overview }) => {
   const params = useParams();
   const [loading, setLoading] = useState(true);
