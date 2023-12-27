@@ -2,12 +2,13 @@
 {
     padding: 30px;
     /* margin-left: 30px; */
+    
 }
 
 .checkout-form {
     background: linear-gradient(0deg, #1C1C24, #1C1C24),
     linear-gradient(0deg, #252D3C, #252D3C);
-    width: 600px;
+    width: 700px;
     border-radius: 5px;
     display: block;
     /* flex-direction: column; */
@@ -72,10 +73,38 @@ width: 100%;
   .right-side {
     background: linear-gradient(0deg, #1C1C24, #1C1C24),
     linear-gradient(0deg, #252D3C, #252D3C);
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     border-radius: 5px;
     padding: 30px;
-    margin-top: 120px;
+    margin-top: 110px;
     margin-right: 40px;
+    width: 400px;
     /* Your styles for the right component */
+  }
+
+
+  .right-side p{
+    color: gray;
+  }
+
+  .right-side span
+  {
+    float: right;
+  
+    color: white;
+ 
+  }
+
+  .checkout-button-confrm
+  {
+    background-color: red;
+    color: white;
+    border: red;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 100px;
+    margin-top: 30px;
   }

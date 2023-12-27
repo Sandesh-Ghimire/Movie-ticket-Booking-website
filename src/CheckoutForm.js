@@ -21,7 +21,7 @@ const CheckoutForm = () => {
   return (
     <div className='container'>
       <h1>Order information</h1>
-      {/* <hr /> */}
+  
 
       <form className="checkout-form">
       <div className="form-row">

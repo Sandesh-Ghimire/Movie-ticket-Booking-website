@@ -14,10 +14,12 @@ const CheckoutPage = () => {
   return (
     <div className="checkout-page">
       <div className="left-side">
-    
+   
         <CheckoutForm />
       </div>
-      <div className="right-side">
+    
+      <div className="">
+     
         <CheckoutSummary title={title} totalAmount={totalAmount} />
       </div>
     </div>
