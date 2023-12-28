@@ -1,6 +1,6 @@
 import jsPDF from 'jspdf';
 import logo from './logo.png'
-
+import QRcode    from 'qrcode.react'
 
 const CheckoutSummary = ({ title, totalAmount }) => {
 
@@ -35,6 +35,12 @@ const handleConfirmAndPay=()=>
     const logoMarginTop = 2; // Adjust the margin top
     pdf.addImage(logo, 'PNG', 10, logoMarginTop, imgWidth, imgHeight);
 
+ // Transforms the canvas into a base64 image
+ let base64Image = document.getElementById('qrcode').toDataURL()
+
+ // Adds the image to the pdf
+ pdf.addImage(base64Image, 'png', 0, 0, 40, 40)
+
   pdf.text(`Ticket Quantity: ${ticketQuantity}`, 20, contentStartY + contentPadding);
   pdf.text(`Total Amount: $${FinalAmount.toFixed(2)}`, 20, contentStartY + 10 + contentPadding);
   pdf.text(`Invoice to: ${fullName}`, 20, contentStartY + 20 + contentPadding);
@@ -44,8 +50,10 @@ const handleConfirmAndPay=()=>
   pdf.text(`Country: ${country}`, 20, contentStartY + 50 + contentPadding);
 
   pdf.text(`Invoice Number: ${invoiceNumber}`, pdf.internal.pageSize.width - 80, 20);
-  pdf.save('TicketConfirmation.pdf');
+ 
 
+  pdf.save('TicketConfirmation.pdf');
+ 
 };
 
 
@@ -61,8 +69,11 @@ const handleConfirmAndPay=()=>
       <p>Sub Total: <span>Rs.{totalAmount}</span></p>
       <p>Discount :<span>Rs.0</span> </p>
       <hr/>
+      
       <p>Total Amount: <span>${FinalAmount}</span></p>
       <hr></hr>
+      
+      <QRcode value = {title} id = 'qrcode'/>
       <button className="checkout-button-confrm" onClick={handleConfirmAndPay}>
               Confirm & Pay
             </button>
