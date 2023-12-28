@@ -39,7 +39,7 @@ const handleConfirmAndPay=()=>
  let base64Image = document.getElementById('qrcode').toDataURL()
 
  // Adds the image to the pdf
- pdf.addImage(base64Image, 'png', 0, 0, 40, 40)
+ pdf.addImage(base64Image, 'png', 130, 40, 40, 40)
 
   pdf.text(`Ticket Quantity: ${ticketQuantity}`, 20, contentStartY + contentPadding);
   pdf.text(`Total Amount: $${FinalAmount.toFixed(2)}`, 20, contentStartY + 10 + contentPadding);
