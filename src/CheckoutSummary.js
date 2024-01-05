@@ -6,10 +6,10 @@ const CheckoutSummary = ({ title, totalAmount }) => {
   const ttlamt = parseInt(totalAmount);
   const FinalAmount = ttlamt + totalAmount * 0.13;
 
-  const fullName = document.getElementById("fullName").value ?? "*";
-  const email = document.getElementById("email").value ?? "*";
-  const address = document.getElementById("address").value ?? "*";
-  const country = document.getElementById("country").value ?? "*";
+  const fullName = document.getElementById("fullName")?.value ?? "*";
+  const email = document.getElementById("email")?.value ?? "*";
+  const address = document.getElementById("address")?.value ?? "*";
+  const country = document.getElementById("country")?.value ?? "*";
 
   const handleConfirmAndPay = () => {
     const ticketQuantity = ttlamt / 100; // Example quantity
