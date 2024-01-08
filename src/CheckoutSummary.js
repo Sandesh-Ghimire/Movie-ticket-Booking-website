@@ -2,14 +2,16 @@ import jsPDF from "jspdf";
 import logo from "./logo.png";
 import QRcode from "qrcode.react";
 
-const CheckoutSummary = ({ title, totalAmount }) => {
+const CheckoutSummary = ({
+  title,
+  totalAmount,
+  name,
+  email,
+  address,
+  country,
+}) => {
   const ttlamt = parseInt(totalAmount);
   const FinalAmount = ttlamt + totalAmount * 0.13;
-
-  const fullName = document.getElementById("fullName")?.value ?? "*";
-  const email = document.getElementById("email")?.value ?? "*";
-  const address = document.getElementById("address")?.value ?? "*";
-  const country = document.getElementById("country")?.value ?? "*";
 
   const handleConfirmAndPay = () => {
     const ticketQuantity = ttlamt / 100; // Example quantity
@@ -46,12 +48,7 @@ const CheckoutSummary = ({ title, totalAmount }) => {
       20,
       contentStartY + 10 + contentPadding
     );
-    pdf.text(
-      `Invoice to: ${fullName}`,
-      20,
-      contentStartY + 20 + contentPadding
-    );
-
+    pdf.text(`Invoice to: ${name}`, 20, contentStartY + 20 + contentPadding);
     pdf.text(`Address: ${address}`, 20, contentStartY + 30 + contentPadding);
     pdf.text(`Email: ${email}`, 20, contentStartY + 40 + contentPadding);
     pdf.text(`Country: ${country}`, 20, contentStartY + 50 + contentPadding);
@@ -68,12 +65,12 @@ const CheckoutSummary = ({ title, totalAmount }) => {
   const qrData = `
     ${title}
     -------------------------------------------------
-    Name: ${fullName}
+    Name: ${name}
     Email: ${email}
     Address: ${address}
     Country: ${country}
     ---------------------------------------------------
-    Amount: ${totalAmount}
+    Amount: ${FinalAmount}
   `;
 
   return (
